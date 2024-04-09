@@ -11,8 +11,9 @@
     </resultMap>
 
     <select id="selectAllMessages" resultMap="messageResultMap">
-        SELECT "ID", "CMTFLG", "DELFLG", "MESSAGE", "CREATED_AT"
-        FROM "HR"."MESSAGES"
+        SELECT ID, CMTFLG, DELFLG, MESSAGE, CREATED_AT
+        FROM HR.MESSAGES
+        ORDER BY CREATED_AT
     </select>
 
     <!-- cmtFlgを更新する -->
