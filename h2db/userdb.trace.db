@@ -1,0 +1,20 @@
+2024-04-09 01:48:33.494155+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "DROP TABLE IF EXISTS [*]USER"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS [*]USER"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTS USER [42001-224]
+2024-04-09 01:51:28.625062+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "DROP TABLE IF EXISTS [*]USER"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS [*]USER"; expected "identifier"; SQL statement:
+DROP TABLE IF EXISTS USER [42001-224]
+2024-04-09 01:51:46.386573+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; expected "identifier"; SQL statement:
+CREATE TABLE USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) ) [42001-224]
+2024-04-09 01:53:28.665176+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; expected "identifier"; SQL statement:
+CREATE TABLE USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) ) [42001-224]
+2024-04-09 01:54:18.679230+09:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "CREATE TABLE [*]USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) )"; expected "identifier"; SQL statement:
+CREATE TABLE USER ( ID INT NOT NULL, NAME VARCHAR(50), AGE INT, PRIMARY KEY(ID) ) [42001-224]

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>All Messages</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>確認</th>
+				<th>CmtFlg</th>
+				<th>DelFlg</th>
+				<th>Message</th>
+				<th>CreatedAt</th>
+				<th>CheckBox</th>
+			</tr>
+		</thead>
+		<tbody style="display: block;overflow-y:scroll;height:200px;">>
+			<tr th:each="message : ${messages}">
+				<td th:text="${message.id}"></td>
+				<td th:text="${message.cmtFlg == 1 ? '済' : '未'}"></td>
+				<td th:text="${message.cmtFlg}"></td>
+				<td th:text="${message.delFlg}"></td>
+				<td th:text="${message.message}"></td>
+				<td th:text="${message.createdAt}"></td>
+				<td><input type="checkbox" th:data-id="${message.id}" class="cmtFlgCheckbox" th:checked="${message.cmtFlg == 1}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<button id="confirmBtn">Confirm Changes</button>
+	
+	<script src="/message.js"></script>
+</body>
+</html>

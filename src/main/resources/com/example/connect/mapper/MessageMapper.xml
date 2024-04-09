@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.connect.mapper.MessageMapper">
+
+    <resultMap id="messageResultMap" type="com.example.connect.model.Message">
+        <id property="id" column="ID" />
+        <result property="cmtFlg" column="CMTFLG" />
+        <result property="delFlg" column="DELFLG" />
+        <result property="message" column="MESSAGE" />
+        <result property="createdAt" column="CREATED_AT" />
+    </resultMap>
+
+    <select id="selectAllMessages" resultMap="messageResultMap">
+        SELECT "ID", "CMTFLG", "DELFLG", "MESSAGE", "CREATED_AT"
+        FROM "HR"."MESSAGES"
+    </select>
+
+    <!-- cmtFlgを更新する -->
+    <update id="updateCmtFlg">
+        UPDATE HR.MESSAGES
+        SET CMTFLG = #{cmtFlg}
+        WHERE ID = #{id}
+    </update>
+
+</mapper>
