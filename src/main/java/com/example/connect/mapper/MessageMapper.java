@@ -10,6 +10,9 @@ import java.util.List;
 public interface MessageMapper {
 	List<Message> selectAllMessages();
 	
-	// cmtFlgを更新するメソッド
+	List<Message> selectUnitMessages();
+	
+    List<Message> selectMessagesById(@Param("messageId") Long messageId);
+	
 	void updateCmtFlg(@Param("id") Long id, @Param("cmtFlg") Integer cmtFlg);
 }

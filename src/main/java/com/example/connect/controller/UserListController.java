@@ -19,7 +19,6 @@ public class UserListController {
 		
 		ModelAndView mav = new ModelAndView("index");
 		
-		// すべてのユーザーを取得する
 		mav.addObject("users", userMapper.selectAllUsers());
 		
 		return mav;

@@ -15,6 +15,21 @@
         FROM HR.MESSAGES
         ORDER BY CREATED_AT
     </select>
+    
+    <select id="selectMessagesById" resultMap="messageResultMap">
+        SELECT ID, CMTFLG, DELFLG, MESSAGE, CREATED_AT
+        FROM HR.MESSAGES
+        WHERE ID = #{messageId}
+    </select>
+
+    
+    
+    <select id="selectUnitMessages" resultMap="messageResultMap">
+        SELECT ID, MAX(CMTFLG)
+        FROM HR.MESSAGES
+        WHERE DELFLG = '0'
+        GROUP BY ID
+    </select>
 
     <!-- cmtFlgを更新する -->
     <update id="updateCmtFlg">

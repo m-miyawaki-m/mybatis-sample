@@ -1,26 +1,12 @@
 <!DOCTYPE html>
-<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Message Buttons</title>
 </head>
 <body>
-	<h1>All Users</h1>
-	<table border="1">
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Name</th>
-				<th>Age</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="user : ${users}">
-				<td th:text="${user.userId}"></td>
-				<td th:text="${user.name}"></td>
-				<td th:text="${user.age}"></td>
-			</tr>
-		</tbody>
-	</table>
+    <div id="buttonsContainer"></div> <!-- ボタンを表示するコンテナ -->
+
+    <script src="/index.js"></script>
 </body>
 </html>

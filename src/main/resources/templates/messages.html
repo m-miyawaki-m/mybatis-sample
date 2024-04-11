@@ -6,6 +6,12 @@
 </head>
 <body>
 	<h1>All Messages</h1>
+	<!-- messageIdをhiddenフィールドで受け取る -->
+	<input type="hidden" id="messageId" th:value="${messageId}" />
+	
+	<td>
+	    <input id="time" type="text" readonly>
+	</td>
 	<table border="1">
 	    <thead>
 	        <tr>
@@ -18,17 +24,9 @@
 	            <th>CheckBox</th>
 	        </tr>
 	    </thead>
-		<tbody style="overflow-y: auto; height:50px;">
-		    <tr th:each="message : ${messages}">
-		        <td th:text="${message.id}"></td>
-		        <td th:text="${message.cmtFlg == 1 ? '済' : '未'}"></td>
-		        <td th:text="${message.cmtFlg}"></td>
-		        <td th:text="${message.delFlg}"></td>
-		        <td th:text="${message.message}"></td>
-		        <td th:text="${message.createdAt}"></td>
-		        <td><input type="checkbox" th:data-id="${message.id}" class="cmtFlgCheckbox" th:checked="${message.cmtFlg == 1}"></td>
-		    </tr>
-		</tbody>
+	    <tbody id="messagesBody">
+	        <!-- JavaScriptでメッセージを動的に挿入 -->
+	    </tbody>
 	</table>
 	<button id="confirmBtn">Confirm Changes</button>
 	
